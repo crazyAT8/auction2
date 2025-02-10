@@ -3,6 +3,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { MainNav } from "@/components/main-nav"
 import { UserNav } from "@/components/user-nav"
 import type React from "react" // Added import for React
+import "./globals.css";
+
 
 const inter = Inter({ subsets: ["latin"] })
 
