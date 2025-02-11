@@ -14,26 +14,28 @@ const auctionTypes = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-12 bg-gradient-to-b from-background to-background/80">
-      <div className="container px-4 mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-6">Web3 Auction Platform</h1>
-        <p className="text-xl text-center text-muted-foreground mb-12">
-          Discover a new way of auctioning with our decentralized platform
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {auctionTypes.map((type) => (
-            <Card key={type.name} className="bg-card hover:bg-card/80 transition-colors">
-              <CardHeader>
-                <CardTitle>{type.name} Auction</CardTitle>
-                <CardDescription>{type.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Button asChild className="w-full">
-                  <Link href={`/auctions/${type.name.toLowerCase()}`}>Explore</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+    <div className="flex flex-col h-full overflow-hidden">
+      <div className="flex-1 overflow-auto py-6 px-4">
+        <div className="container mx-auto">
+          <h1 className="text-3xl font-bold text-center mb-4">Web3 Auction Platform</h1>
+          <p className="text-lg text-center text-muted-foreground mb-8">
+            Discover a new way of auctioning with our decentralized platform
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {auctionTypes.map((type) => (
+              <Card key={type.name} className="bg-card hover:bg-card/80 transition-colors">
+                <CardHeader>
+                  <CardTitle>{type.name} Auction</CardTitle>
+                  <CardDescription>{type.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Button asChild className="w-full">
+                    <Link href={`/auctions/${type.name.toLowerCase()}`}>Explore</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </div>
