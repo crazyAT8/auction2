@@ -24,11 +24,11 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {auctionTypes.map((type) => (
               <Card key={type.name} className="bg-card hover:bg-card/80 transition-colors">
-                <CardHeader>
-                  <CardTitle>{type.name} Auction</CardTitle>
-                  <CardDescription>{type.description}</CardDescription>
+                <CardHeader className="p-4">
+                  <CardTitle className="text-lg">{type.name} Auction</CardTitle>
+                  <CardDescription className="text-sm">{type.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="p-4 pt-0">
                   <Button asChild className="w-full">
                     <Link href={`/auctions/${type.name.toLowerCase()}`}>Explore</Link>
                   </Button>
