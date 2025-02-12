@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className="h-full">
+    <html lang="en" suppressHydrationWarning className="h-full w-full overflow-x-hidden">
       <body className={`${inter.className} bg-background text-foreground flex flex-col h-full overflow-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="flex flex-col h-full">
